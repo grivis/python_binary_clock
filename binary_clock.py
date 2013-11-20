@@ -2,7 +2,7 @@ __author__ = 'tim mcguire'
 import datetime
 import math
 import Tkinter
-
+import sys,os
 
 def to_binary(dec, width):
     x = width - 1
@@ -41,8 +41,8 @@ def tens_and_ones(num):
     ones = num % 10
     return tens, ones
 
-
 def run(master):
+
     t = datetime.datetime.now()
     time_collection = t.hour, t.minute, t.second
     x = 15
@@ -54,6 +54,8 @@ def run(master):
     main_canvas.pack()
     main_canvas.after(200, run, master)
 
+
+time_format = sys.argv[1]
 start_y = 150
 right_step = 20
 dot_size = 15
