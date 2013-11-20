@@ -57,8 +57,10 @@ def run(master):
     main_canvas.pack()
     main_canvas.after(200, run, master)
 
+time_format = 24
+if len(sys.argv) >= 2:
+    time_format = sys.argv[1]
 
-time_format = sys.argv[1]
 start_y = 150
 right_step = 20
 dot_size = 15
