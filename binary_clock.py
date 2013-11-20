@@ -17,6 +17,8 @@ def to_binary(dec, width):
         x -= 1
     return answer
 
+def draw_vertical_line():
+    pass
 
 def fill_dots(times_to_use, x,length):
 
@@ -50,6 +52,7 @@ def run(master):
     for val in time_collection:
         # val is the numeric value, x is horizontal offset, length is how many dots tall the stack will be
         x = fill_dots(val, x,length)
+        draw_vertical_line()
         length =3
     main_canvas.pack()
     main_canvas.after(200, run, master)
