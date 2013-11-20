@@ -22,7 +22,6 @@ def fill_dots(times_to_use, x,length):
 
     tup = tens_and_ones(times_to_use)
     for num in tup:
-        #2,4,3,4,3,4
         binary_string = to_binary(num, length)
         length =4
         x += right_step
